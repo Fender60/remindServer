@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
 	credentials: true,
-	origin: "http://remind-me.zzz.com.ua"
+	origin: process.env.CLIENT_URL
 }));
 app.use('/api', router);
 app.use(errorMiddleware);
